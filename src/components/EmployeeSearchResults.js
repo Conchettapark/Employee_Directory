@@ -46,7 +46,7 @@ class EmployeeSearchResults extends Component {
         <div>
           {(this.state.results || []).map((r) => (
             <div>
-              <img src={r.picture.medium} />
+              <img alt="" src={r.picture.medium} />
               <p>{r.name.first + " " + r.name.last}</p>
               <a href={"mailto:" + r.email}>{r.email}</a>
               <p>Phone: {r.cell || r.phone}</p>

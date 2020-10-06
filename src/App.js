@@ -4,22 +4,7 @@ import EmployeeSearchResults from "./components/EmployeeSearchResults";
 
 function App() {
   return (
-    /*<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>*/
+    
     <div>
       <noscript>You need to enable JavaScript to run this app.</noscript>
       <div id="root"></div>
@@ -35,9 +20,9 @@ function App() {
       </div>
 
       <nav class="navbar navbar-light bg-light">
-        {/*<SearchBox />*/}
+        {/*<SearchBox />*/} 
         <EmployeeSearchResults />
-      </nav>
+        </nav>
     </div>
   );
 }
