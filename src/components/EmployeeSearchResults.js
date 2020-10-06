@@ -29,14 +29,14 @@ class EmployeeSearchResults extends Component {
       <div>
         <input
           id="searchBox"
-          class="form-control new-class mr-sm-2"
+          className="form-control new-class mr-sm-2"
           type="search"
           placeholder="Search"
           aria-label="Search"
           ref={this.textInput}
         />
         <button
-          class="btn btn-outline-success my-2 my-sm-0"
+          className="btn btn-outline-success my-2 my-sm-0"
           type="submit"
           onClick={(e) => this.onClick()}
         >
@@ -44,12 +44,14 @@ class EmployeeSearchResults extends Component {
         </button>
 
         <div>
-          {(this.state.results || []).map((r) => (
-            <div>
-              <img alt="" src={r.picture.medium} />
-              <p>{r.name.first + " " + r.name.last}</p>
-              <a href={"mailto:" + r.email}>{r.email}</a>
-              <p>Phone: {r.cell || r.phone}</p>
+          {(this.state.results || []).map((r, index) => (
+            <div key={index}>
+              <img key={index + 1} alt="" src={r.picture.medium} />
+              <p key={index + 2}>{r.name.first + " " + r.name.last}</p>
+              <a key={index + 3} href={"mailto:" + r.email}>
+                {r.email}
+              </a>
+              <p key={index + 4}>Phone: {r.cell || r.phone}</p>
             </div>
           ))}
         </div>
